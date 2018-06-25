@@ -1,0 +1,51 @@
+ls
+ls -la
+ls -la1
+
+cp - copy
+	cp filename wheretocopy/newname
+	cp 33 ~/133
+	cp 145 ~/Музика/155
+
+mv - move
+	mv filename wheretomove/newname
+	mv 122 Документи/122222222
+
+mkdir - створення папки
+
+man cd - інфо по команді
+
+rm - видалити файл
+rm -Rf - видалити папку
+
+nano filename - створює файл і дає можливість відразу щось написати
+
+nano newfile
+git add newfile
+git commit -m “msg hohohoo”
+git push
+git status
+ls - що у цій папці?
+pwd - де я знаходжусь?
+cd - зміна папки
+mv - переміщення
+cp - копіювання
+mkdir - створення нової папки
+rm - видалення файлу
+clear - очищення консолі
+
+-----------------------------------------------------------------------------
+git
+
+git status
+git add filename
+git commit -m "Commit text"
+git push
+
+
+
+
+
+	
+
+
