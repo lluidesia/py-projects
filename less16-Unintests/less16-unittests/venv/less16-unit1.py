@@ -61,9 +61,11 @@ class JsonPlaceholderTests(unittest.TestCase):
         logging.info('[PASS]')
 
     def test_request_patch(self):
-        response = requests.put(url + 'posts/1')
+        response = requests.patch(url + 'posts/1')
         self.assertEqual(response.status_code, 200)
         logging.info('[PASS]')
+
+    #в реальному світі перед тестом delete потрібно створити запис і вже його видаляти під час тесту
 
     def test_request_delete(self):
         response = requests.delete(url + 'posts/1')
@@ -80,15 +82,23 @@ class JsonPlaceholderTests(unittest.TestCase):
         self.assertEqual(response.status_code, 404)
         logging.info('[PASS]')
 
-    def test_request_patch(self):
-        response = requests.put(url + 'posts/-11')
+    def test_request_patch_negative(self):
+        response = requests.patch(url + 'posts/-11')
         self.assertEqual(response.status_code, 404)
         logging.info('[PASS]')
 
-    def test_request_delete(self):
+    def test_request_delete_negative(self):
         response = requests.delete(url + 'posts/-1')
         self.assertEqual(response.status_code, 404)
         logging.info('[PASS]')
+
+    #перевірити респонс боді, чи є тайтл, чи є юзер, id
+    #можна зробити трохи більші тести
+    #гет реквест респонс код тест
+    #ще один тест, кий пеервіряє ключи і ще один логером, вкінці тест
+
+
+
 
 if __name__ == '__main__':
     unittest.main()
