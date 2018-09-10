@@ -1,0 +1,35 @@
+<form>
+  <input type="text" placeholder="login">
+  <input type="password" placeholder="password">
+  <input type="submit">
+  <button>Submit</button>
+</form>
+
+<form>
+  <textarea></textarea>
+  <input type="checkbox">
+  <input type="reset">
+</form>
+
+<select>
+  <option> one </option>
+  <option> two </option>
+  <option> three </option>
+</select>
+
+<h1>
+Hey hey
+</h1>
+
+<form>
+  <input type="radio" name="radio1" value="radio 1" checked>
+  Radio 1<br>
+  <input type="radio" name="radio1" value="radio 2">
+  Radio 2<br>
+  <input type="radio" name="radio1" value="radio 3">
+  Radio 3<br>
+</form>
+
+
+
+

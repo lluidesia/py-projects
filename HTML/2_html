@@ -1,0 +1,40 @@
+https://jsfiddle.net/bc42gfaz/5/
+<div class = "left_block">
+  <form action="">
+    <input class = "button" type="button" value="add">
+  </form>
+</div>
+
+<div class = "right_block">
+  <form action="">
+    <input class = "button" type="button" value = "delete">
+  </form>
+</div>
+
+<div class = "footer_block">
+  <form action="">
+    <input class = "button" type="button" value="submit checked">
+  </form>
+</div>
+
+
+.left_block, .right_block{
+  width: 44%;
+  display: inline-block;
+  margin: 0 10px;
+}
+.button{
+  width: 100%;
+  padding: 10px 0;
+  font-size: 22px;
+  margin: 20px 10px;
+  box-sizing: border-box;
+  background: #c1c1c1;
+  border: none;
+  border-radius: 15px;
+  transition: 0.8s
+}
+.button:hover{
+  cursor: pointer;
+  transform: scale(1.1)
+}
