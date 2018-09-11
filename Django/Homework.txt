@@ -1,0 +1,36 @@
+Почитати про  MVC та MVT
+https://uk.wikipedia.org/wiki/Модель-вид-контролер
+http://www.vr-online.ru/blog/django-chast-2-mvt-ili-mvc-modeli-8967
+Приложение организуется по так называемому паттерну MVC. В Django этот паттерн называют MVT, но сути это не меняет. Что из себя представляет MVC: Модель (Model), Представление (View), Контроллер (Controller). Модель отвечает за работу с данными. Она взаимодействует с базой данных, проверяет данные на корректность, создает расчетные данные в случае необходимости. Представление отвечает за то, как эти данные будут выглядеть, придает им удобочитаемую форму. Контроллер является прослойкой между моделью, представлением и посетителем сайта. Когда посетитель сайта запрашивает страницу, этот запрос передается контроллеру. Он в свою очередь собирает все модели, которые могу пригодиться, и просит их предоставить данные. Потом контроллер выбирает представление, которое лучше всего отвечает запросу пользователя и передает ему данные. Сформированная страница (представление) передается как ответ на запрос.
+
+В Django начинается небольшая путаница, поскольку в его терминах этот паттерн называется Model-View-Template (Модель-Представление-Шаблон). Однако View в Django скорее выполняет функцию контроллера, а Template - представления.
+
+Хватит теории, перейдем к практике. Приложение flatpages выстроено по MVT. Моделью в этом случае является та самая таблица в базе данных, которая хранит содержание страниц. Контроллер был у нас один, он вызывался через middleware, и по адресу определял, какую страницу нам отобразить. А вот шаблон-представление мы создали сами (defaulf.html, шаблон по умолчанию для flatpages, мы его могли переопределить для какой-нибудь из страниц, но не стали).
+
+------------------------------------------------------------------------------
+Пройтись по мануалу і зробити короткий спосок кроків які потрібно виконати для генерації нового додатку.
+
+
+1. Get started by creating our django project: django-admin.py startproject todoapp
+2. Need to create a django app that holds the model and admin stuff: manage.py startapp todolist
+3. manage.py runserver 8100 http://localhost:8100
+4. The first thing you need to do is to add the created app “todolist” in the INSTALLED_APPS.
+5. replace the TEMPLATES list with the below code
+6. need to add the static and static_url which will handle your css, js and so on files
+7. need to create our model which deals with our database basically. Open the models.py file in the todolist directory and paste the below code
+8. create migration
+9. create a super user
+10. need to write a view that adds, deletes and as well as displays all the todos.
+11. templates - create an “index.html” file and create a style.css
+12. set up our url
+13. update the admin.py file
+14. create categories
+15. Adding and Deleting Todos
+
+------------------------------------------------------------------------------
+Розібратись як можна змінювати стилі шаблону та сам шаблон (на анступному зайнятті ви будете персоніфікувати дизайн вашого додатку)
+
+
+
+
+
