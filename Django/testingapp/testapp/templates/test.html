@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>Start Online Test</title>
+
+    <script>
+          function openWin() {
+          alert('Відповідь відправлено!');
+          location.href='http://localhost:8100';
+}</script>
+
+
+  </head>
+
+  <body>
+
+    <center>
+      <form>
+        <fieldset>
+          <legend align="center">
+            <font size="5">Привіт, Name, почнемо тест!</font>
+          </legend> <br></br>
+
+          <p>[[Текст питання]]</p>
+
+
+          <form action="forms.py" >
+
+
+          <form>
+
+
+            <br></br>
+            <input type="radio" name="question" value="v1"> Варіант 1<br>
+            <input type="radio" name="question" value="v2"> Варіант 2<br>
+            <input type="radio" name="question" value="v3"> Варіант 3
+          </form><br></br>
+
+          <center><input type="button" onclick="openWin();"  value="Відправити"></center><br></br>
+        </fieldset>
+      </form>
+    </center>
+    </div>
+  </body>
+
+</html>
