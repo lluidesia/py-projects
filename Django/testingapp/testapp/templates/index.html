@@ -3,32 +3,98 @@
 
   <head>
     <title>Online Test</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+
+
+    <style>
+
+.page-header {
+  color: black;
+  margin-top: 0;
+  padding: 20px 20px 20px 20px;
+  font-family: 'Georgia';
+  font-size: 30px;
+  /*text-shadow: 1px 1px;*/
+  background-color: #e6ffcc;
+}
+
+.page-name {
+  color: black;
+  padding: 20px 20px 20px 10px;
+  font-family: 'Georgia';
+  font-size: 20px;
+}
+
+input[type=text] {
+  border: none;
+  border-bottom: 2px solid;
+  font-family: 'Georgia';
+}
+
+.page-button {
+  color: #4B4E4F;
+  padding: 20px 20px 20px 10px;
+  font-family: 'Georgia';
+  font-size: 20px;
+}
+
+input[type=button],
+input[type=submit] {
+  background-color: #e6ffcc;
+  border: 1px solid black;
+  color: black;
+  padding: 16px 32px;
+
+
+
+}
+
+
+    </style>
+
+
+
+
+
+
+
+
   </head>
 
-  <body>
+    <body>
 
-    <center>
-      <form>
-        <fieldset>
-          <legend align="center">
+      <center>
+        <form action="/test" method="get">
+
+          <div class="page-header">
             <font size="5">Введіть ваше ім'я і почніть тест!</font>
-          </legend> <br></br>
+          </div>
+          <br>
+          <br>
+
+          <div class="page-name">
+            <center>
+              <font size="5"> Ім'я:   </font><input type="text" name="TEXT_1">
+            </center>
+          </div>
+          <br>
+          <br>
+
           <center>
 
-            <form action="forms.py" >
 
-              Ім'я: <input type="text" name="TEXT_1" >
-              <input type="submit">
+            <div class="page-button">
+              <input type="submit" value="Почати тест!">
+            </div>
+          </center>
 
+              <img src="https://img.clipartxtras.com/fa6325591648834abcfff37565391dd2_free-snake-clipart-clip-art-pictures-graphics-illustrations-python-snake-clipart_550-400.jpeg">
+        </form>
+      </center>
+    </body>
 
-
-          </center><br></br>
-          <center><input type="button" onclick="location.href='/test'" value="Почати тест!" ></center>
-          </form><br></br>
-        </fieldset>
-      </form>
-    </center>
-    </div>
-  </body>
 
 </html>
+

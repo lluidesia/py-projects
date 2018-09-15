@@ -20,7 +20,9 @@ from testapp import views
 
 urlpatterns = [
     url(r'^$', views.HomePageView.as_view()),
-    url(r'^test/$', views.TestPageView.as_view(template_name='test.html'), name="test"),
+    url(r'^test/$', views.TestPageView.as_view()),
+    url(r'^result/$', views.ResultPageView.as_view()),
+    # url(r'^test/$', views.TestPageView.as_view(template_name='test.html'), name="test"),
     #url(r'^test/$', views.TestPageView, name="test")
 ]
 

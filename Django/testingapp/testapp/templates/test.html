@@ -4,45 +4,46 @@
 
   <head>
     <title>Start Online Test</title>
-
-    <script>
-          function openWin() {
-          alert('Відповідь відправлено!');
-          location.href='http://localhost:8100';
-}</script>
-
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 
   </head>
 
   <body>
 
     <center>
-      <form>
         <fieldset>
           <legend align="center">
-            <font size="5">Привіт, Name, почнемо тест!</font>
-          </legend> <br></br>
-
-          <p>[[Текст питання]]</p>
-
-
-          <form action="forms.py" >
+            <font size="5">Привіт, {{ aaa }}, почнемо тест!</font>
+          </legend>
+          <br>
 
 
-          <form>
+          <form action="/result" method="get">
+
+              <p>{{ question }}</p>
 
 
-            <br></br>
-            <input type="radio" name="question" value="v1"> Варіант 1<br>
-            <input type="radio" name="question" value="v2"> Варіант 2<br>
-            <input type="radio" name="question" value="v3"> Варіант 3
-          </form><br></br>
+            <br>
+            <br>
 
-          <center><input type="button" onclick="openWin();"  value="Відправити"></center><br></br>
+            <input type="radio" name="answer" value="A"> {{ val1 }} <br>
+            <input type="radio" name="answer" value="B"> {{ val2 }} <br>
+            <input type="radio" name="answer" value="C"> {{ val3 }}
+            <br>
+            <br>
+            <br>
+
+              <input type="text" hidden name="q" value="{{ question }}">
+            <input type="text" hidden name="answer_r" value="{{ answer_r }}">
+
+          <center><input type="submit" value="Відправити"></center>
+            <br>
+          </form>
+
         </fieldset>
-      </form>
     </center>
-    </div>
+
   </body>
 
 </html>
