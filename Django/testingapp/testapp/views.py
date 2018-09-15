@@ -21,16 +21,20 @@ class ResultPageView(TemplateView):
         text_legend = "Вітання!!"
         text = "Ви супер пайтон програміст!!"
         text_button = "Ура!"
+        snake = "https://img.clipartxtras.com/d814c670ec5e2eb84f04fb44777a6f87_free-python-clipart-python-snake-clipart_218-217.jpeg"
         if answer_user!=answer_right:
             text_legend = "Невдача!!"
             text = "Спробуйте ще раз..."
             text_button = "Пройти ще раз!"
+            snake = "https://img.clipartxtras.com/676d82a73a98203c039769c6b61545bb_python-clipart-download-python-clipart-python-snake-clipart_240-195.jpeg"
 
-        return render(request, 'result.html', {'text_legend':text_legend, 'text':text, 'text_button':text_button})
+        return render(request, 'result.html', {'text_legend':text_legend, 'text':text, 'text_button':text_button,'snake':snake})
 
 class TestPageView(TemplateView):
     def get(self, request, **kwargs):
         text_1 = request.GET['TEXT_1']
+        if text_1=='':
+            text_1 = 'Анонім'
 
         user_test = Test('files/Questions.csv')
         test_question = user_test.question()

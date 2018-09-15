@@ -7,27 +7,70 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 
+    <style>
+        .page-header {
+          color: black;
+          margin-top: 0;
+          padding: 20px 20px 20px 20px;
+          font-family: 'Georgia';
+          font-size: 30px;
+          /*text-shadow: 1px 1px;*/
+          background-color: #e6ffcc;
+        }
+
+        .page-name {
+          color: black;
+          padding: 20px 20px 20px 10px;
+          font-family: 'Georgia';
+          font-size: 20px;
+        }
+
+
+        .page-button {
+          color: #4B4E4F;
+          padding: 20px 20px 20px 10px;
+          font-family: 'Georgia';
+          font-size: 20px;
+        }
+
+        input[type=button],
+        input[type=submit] {
+          background-color: #e6ffcc;
+          border: 1px solid black;
+          color: black;
+          padding: 16px 32px;
+        }
+
+    </style>
+
+
+
+
   </head>
 
   <body>
 
     <center>
       <form action="/" method="get">
-        <fieldset>
-          <legend align="center">
+        <div>
+          <div class="page-header">
             <font size="5">{{ text_legend }}</font>
-          </legend> <br>
+          </div> <br><br><br>
 
+          <div class="page-name">
           <p>{{ text }}</p>
-
+          </div> <br><br>
           <center>
 
+            <div class="page-button">
             <input type="submit" value="{{ text_button }}"></center><br>
+            </div>
 
-        </fieldset>
       </form>
-    </center>
 
+
+            <img src="{{ snake }}">
+</center>
   </body>
 
 </html>
