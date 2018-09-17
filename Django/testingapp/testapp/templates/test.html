@@ -14,7 +14,6 @@
           padding: 20px 20px 20px 20px;
           font-family: 'Georgia';
           font-size: 30px;
-          /*text-shadow: 1px 1px;*/
           background-color: #e6ffcc;
         }
 
@@ -25,6 +24,15 @@
           font-size: 20px;
         }
 
+        .page-radio1 {
+          color: black;
+          padding: 20px 20px 20px 10px;
+          font-family: 'Georgia';
+          font-size: 125px;
+          margin-left: 555px;
+          font-weight:100;
+
+        }
 
         .page-button {
           color: #4B4E4F;
@@ -33,12 +41,17 @@
           font-size: 20px;
         }
 
-        input[type=button],
         input[type=submit] {
           background-color: #e6ffcc;
           border: 1px solid black;
           color: black;
           padding: 16px 32px;
+        }
+
+        label {
+          font-weight: normal;
+          font-family: 'Georgia';
+          font-size: 20px;
         }
 
     </style>
@@ -50,7 +63,6 @@
   <body>
 
     <center>
-        <fieldset>
 
              <div class="page-header">
                 <font size="5">Привіт, {{ aaa }}, почнемо тест!</font>
@@ -58,21 +70,33 @@
 
           <br>
 
-      <div class="page-name">
+
           <form action="/result" method="get">
+                <div class="page-name">
+                        <p>{{ question }}</p>
+                </div>
 
-              <p>{{ question }}</p>
+            <br>
+
+
+            <table>
+            <thead>
+                <tr>
+                    <th colspan="2">
+                        <div align="left" class="page-radio" >
+                            <label><input type="radio" name="answer" required value="A"> {{ val1 }}</label> <br>
+                            <label><input type="radio" name="answer"  value="B"> {{ val2 }}</label> <br>
+                            <label><input type="radio" name="answer"  value="C"> {{ val3 }}</label>
+                        </div>
+
+                    </th>
+                </tr>
+            </thead>
+            </table>
 
 
             <br>
-            <br>
 
-            <label><input type="radio" name="answer" value="A"> {{ val1 }}</label> <br>
-            <label><input type="radio" name="answer" value="B"> {{ val2 }}</label> <br>
-            <label><input type="radio" name="answer" value="C"> {{ val3 }}</label>
-            <br>
-            <br>
-          </div>
               <input type="text" hidden name="q" value="{{ question }}">
             <input type="text" hidden name="answer_r" value="{{ answer_r }}">
 
@@ -82,7 +106,7 @@
             <br>
           </form>
 
-        </fieldset>
+
 
     </center>
 
